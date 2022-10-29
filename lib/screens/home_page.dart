@@ -250,12 +250,12 @@ class _HomePage extends State<HomePage>
 
   Widget getSearchBarUI() {
     return Padding(
-      padding: const EdgeInsets.only(left: 16, right: 16, top: 50, bottom: 30),
+      padding: const EdgeInsets.only(left: 20, right: 16, top: 100, bottom: 30),
       child: Row(
         children: <Widget>[
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
+              padding: const EdgeInsets.only(right: 20, top: 8, bottom: 8),
               child: Container(
                 // ignore: prefer_const_constructors
                 decoration: BoxDecoration(
@@ -359,7 +359,7 @@ class _HomePage extends State<HomePage>
             appBar: PreferredSize(
                 preferredSize: isExpanded == false
                     ? Size.fromHeight(100.0)
-                    : Size.fromHeight(170.0),
+                    : Size.fromHeight(200.0),
                 child: AppBar(
                   backgroundColor: Color.fromARGB(255, 10, 34, 133),
                   automaticallyImplyLeading: true,
@@ -656,7 +656,7 @@ class _HomePage extends State<HomePage>
                                 controller.text.isNotEmpty
                             ? GridView.builder(
                                 controller: _scrollController,
-                                padding: const EdgeInsets.all(8),
+                                padding: const EdgeInsets.all(10),
                                 itemCount: _searchResult.length,
                                 itemBuilder: (BuildContext context, int index) {
                                   return Card(
@@ -708,7 +708,7 @@ class _HomePage extends State<HomePage>
                                           SliverGridDelegateWithFixedCrossAxisCount(
                                               crossAxisCount: 2),
                                       controller: _scrollController,
-                                      padding: const EdgeInsets.all(8),
+                                      padding: const EdgeInsets.all(10),
                                       itemCount: _userDetails.length,
                                       itemBuilder:
                                           (BuildContext context, int index) {
